@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.StoreCatalog", "GeekBurger.StoreCatalog\GeekBurger.StoreCatalog.csproj", "{4EA6619E-8221-44E7-98ED-BF8CA3A3228E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.StoreCatalog.Contract", "GeekBurger.StoreCatalog.Contract\GeekBurger.StoreCatalog.Contract.csproj", "{E2554DD8-62C1-4E3B-91D2-0A09889BD8FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.StoreCatalog.Core", "GeekBurger.StoreCatalog.Core\GeekBurger.StoreCatalog.Core.csproj", "{D4C77F81-5D2D-4EF9-8172-20EDB1F65C9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.StoreCatalog.Infra", "GeekBurger.StoreCatalog.Infra\GeekBurger.StoreCatalog.Infra.csproj", "{AF7F1AFF-6B20-49F8-9A52-9B1BC5844D6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.StoreCatalog.Tests", "GeekBurger.StoreCatalog.Tests\GeekBurger.StoreCatalog.Tests.csproj", "{EE274A96-8CDE-4B2F-A4C7-699176D7DA4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EA6619E-8221-44E7-98ED-BF8CA3A3228E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA6619E-8221-44E7-98ED-BF8CA3A3228E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA6619E-8221-44E7-98ED-BF8CA3A3228E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA6619E-8221-44E7-98ED-BF8CA3A3228E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2554DD8-62C1-4E3B-91D2-0A09889BD8FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2554DD8-62C1-4E3B-91D2-0A09889BD8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2554DD8-62C1-4E3B-91D2-0A09889BD8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2554DD8-62C1-4E3B-91D2-0A09889BD8FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C77F81-5D2D-4EF9-8172-20EDB1F65C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C77F81-5D2D-4EF9-8172-20EDB1F65C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C77F81-5D2D-4EF9-8172-20EDB1F65C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C77F81-5D2D-4EF9-8172-20EDB1F65C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7F1AFF-6B20-49F8-9A52-9B1BC5844D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7F1AFF-6B20-49F8-9A52-9B1BC5844D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7F1AFF-6B20-49F8-9A52-9B1BC5844D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7F1AFF-6B20-49F8-9A52-9B1BC5844D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE274A96-8CDE-4B2F-A4C7-699176D7DA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE274A96-8CDE-4B2F-A4C7-699176D7DA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE274A96-8CDE-4B2F-A4C7-699176D7DA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE274A96-8CDE-4B2F-A4C7-699176D7DA4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {428D4E64-FD9F-4FD7-B772-A8A83109F994}
+	EndGlobalSection
+EndGlobal
