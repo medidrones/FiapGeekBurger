@@ -69,7 +69,7 @@ namespace GeekBurger.StoreCatalog
                 {
                     Version = "v1",
                     Title = "GeekBurger Store Catalog",
-                    Description = "Project for FIAP",
+                    Description = "Projeto MBA 21NET FIAP",
                     TermsOfService = "None"
                 });
 

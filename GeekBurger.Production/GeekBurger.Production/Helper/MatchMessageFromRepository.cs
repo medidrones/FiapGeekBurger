@@ -31,7 +31,7 @@ namespace GeekBurger.Production.Helper
                 destination.ProductionArea.Restrictions.Add(restriction.Name);
             }
 
-            //destination.State = ProductionAreaChangedMessage.ProductionAreaState.Added;
+            destination.State = ProductionAreaChangedMessage.ProductionAreaState.Added;
         }
     }
 }

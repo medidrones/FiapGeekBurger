@@ -7,6 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GeekBurger.Production.Repository
 {
+    /// <summary>
+    /// Repositório da área de produção
+    /// </summary>
     public class ProductionAreaRepository : IProductionAreaRepository
     {
         private ProductionContext _context;

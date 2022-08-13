@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace GeekBurger.Production.Helper
 {
+    /// <summary>
+    /// Classe responsável por configurar o AutoMapper 
+    /// </summary>
     public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()

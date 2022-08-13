@@ -13,6 +13,9 @@ using Newtonsoft.Json;
 
 namespace GeekBurger.Production.Service
 {
+    /// <summary>
+    /// Serviços relacionados com a finalização de produção de ordem.
+    /// </summary>
     public class OrderFinishedService : IOrderFinishedService
     {
         private const string Topic = "OrderFinishedTopic";

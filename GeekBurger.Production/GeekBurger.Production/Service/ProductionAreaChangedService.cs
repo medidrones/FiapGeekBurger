@@ -111,7 +111,7 @@ namespace GeekBurger.Production.Service
                 Console.WriteLine($"Error in SendAsync task: {innerException.Message}. Details:{innerException.StackTrace} ");
 
                 if (innerException is ServiceBusCommunicationException)
-                    Console.WriteLine("Connection Problem with Host. Internet Connection can be down");
+                    Console.WriteLine("Problema de conexão com host. Conexão com a Internet pode estar em baixa.");
             });
 
             return false;

@@ -7,6 +7,9 @@ namespace GeekBurger.Production.Extension
 {
     public static class ProductionContextExtension
     {
+        /// <summary>
+        /// Classe responsável por fazer a carga inicial dos dados do projeto
+        /// </summary>
         public static void Seed(this ProductionContext context)
         {
             context.ProductionAreas.RemoveRange(context.ProductionAreas);

@@ -4,6 +4,9 @@ using GeekBurger.Production.Model;
 
 namespace GeekBurger.Production.Repository
 {
+    /// <summary>
+    /// Interface utilizada para o repositório de área de produção
+    /// </summary>
     public interface IProductionAreaRepository
     {
         IEnumerable<ProductionArea> GetAvailableProductionAreas();

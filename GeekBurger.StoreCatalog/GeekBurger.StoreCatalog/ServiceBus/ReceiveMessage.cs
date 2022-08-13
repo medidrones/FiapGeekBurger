@@ -57,7 +57,6 @@ namespace GeekBurger.StoreCatalog.ServiceBus
             subscriptionClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions: messageHandlerOptions);
         }
 
-
         /// <summary>
         /// Método responsável por processar a mensagem
         /// </summary>

@@ -11,6 +11,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace GeekBurger.Production.Service
 {
+    /// <summary>
+    /// Serviços relacionados ao recebimento de novos pedidos.
+    /// </summary>
     public class NewOrderService : INewOrderService
     {
         private IConfiguration _configuration;
