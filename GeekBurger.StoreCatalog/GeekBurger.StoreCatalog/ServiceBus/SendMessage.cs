@@ -28,9 +28,9 @@ namespace GeekBurger.StoreCatalog.ServiceBus
         /// <returns></returns>
         public async Task CriarTopicAsync()
         {
-            var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal("bfd544b9-eb3d-4409-aa76-e2b83c39a446", "lovetoteach", "11dbbfe2-89b8-4549-be10-cec364e59551", AzureEnvironment.AzureGlobalCloud);
-            var serviceBusManager = ServiceBusManager.Authenticate(credentials, "dbc49a7f-caee-46b5-a6a6-7eac85bf97f1");
-            var serviceBusNamespace = serviceBusManager.Namespaces.GetByResourceGroup("fiap", "GeekBurger");
+            var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal("PRINCIPAL_NAME2", "PRINCIPAL_PASSWORD2", "11dbbfe2-89b8-4549-be10-cec364e59551", AzureEnvironment.AzureGlobalCloud);
+            var serviceBusManager = ServiceBusManager.Authenticate(credentials, "8f738168-bc53-45e3-a83d-45ebfe947df2");
+            var serviceBusNamespace = serviceBusManager.Namespaces.GetByResourceGroup("FIAP-NET", "GeekBurgerNET");
 
             var topics = await serviceBusNamespace.Topics.ListAsync();
             var topic = topics.FirstOrDefault(t => t.Name == "storecatalog");
@@ -40,7 +40,7 @@ namespace GeekBurger.StoreCatalog.ServiceBus
             };
 
             /*Criação da subscrição no tópico de areas de produção*/
-            await topic.Manager.Inner.Subscriptions.CreateOrUpdateAsync("fiap", "GeekBurger", "productionareachangedtopic", "productionarea", subscriptionInner);
+            await topic.Manager.Inner.Subscriptions.CreateOrUpdateAsync("FIAP-NET", "GeekBurgerNET", "productionareachangedtopic", "productionarea", subscriptionInner);
 
             if (topic == null)
             {
@@ -48,7 +48,7 @@ namespace GeekBurger.StoreCatalog.ServiceBus
                     .WithSizeInMB(1024)
                     .CreateAsync();
 
-                await topic.Manager.Inner.Subscriptions.CreateOrUpdateAsync("fiap", "GeekBurger", "storecatalog", "catalog", subscriptionInner);
+                await topic.Manager.Inner.Subscriptions.CreateOrUpdateAsync("FIAP-NET", "GeekBurgerNET", "storecatalog", "catalog", subscriptionInner);
             }
         }
 
@@ -61,7 +61,7 @@ namespace GeekBurger.StoreCatalog.ServiceBus
         {
             try
             {
-                var topicClient = new TopicClient("Endpoint=sb://geekburger.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=VrwaCn+4NbZkDFguQNGDCu2cMQ7IXyjOPLMto0HuE8Q=", "storecatalog");
+                var topicClient = new TopicClient("Endpoint=sb://geekburgernet.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Z8l0qsaaDXT7gv5z0lUlmB1dH/ISKypGf3/OVFOIGsU=", "storecatalog");
                 var message = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(product)));
                 await topicClient.SendAsync(message);
                 await topicClient.CloseAsync();

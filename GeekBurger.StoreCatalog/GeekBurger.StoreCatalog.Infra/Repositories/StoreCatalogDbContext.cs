@@ -25,7 +25,7 @@ namespace GeekBurger.StoreCatalog.Infra.Repositories
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=yourservername;Database=ContactDB;User Id=youruserid;Password=yourpassword;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer(@"Server=colocarNome;Database=GeekBurgerDatabase;User Id=fiap21net;Password=colocarSenha;Trusted_Connection=True;");
             }
         }
 

@@ -27,7 +27,7 @@ namespace GeekBurger.StoreCatalog.ServiceBus
             _repository = new Repository<ProductionAreas>(new StoreCatalogDbContext(new Microsoft.EntityFrameworkCore.DbContextOptions<StoreCatalogDbContext>()));
         }
 
-        const string ServiceBusConnectionString = "Endpoint=sb://geekburger.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=VrwaCn+4NbZkDFguQNGDCu2cMQ7IXyjOPLMto0HuE8Q=";
+        const string ServiceBusConnectionString = "Endpoint=sb://geekburgernet.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=Z8l0qsaaDXT7gv5z0lUlmB1dH/ISKypGf3/OVFOIGsU=";
         //const string TopicName = "storecatalog";
         //const string SubscriptionName = "catalog";
         const string TopicName = "productionareachangedtopic";

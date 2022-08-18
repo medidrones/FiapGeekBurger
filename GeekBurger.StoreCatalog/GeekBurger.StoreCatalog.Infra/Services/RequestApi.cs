@@ -14,7 +14,7 @@ namespace GeekBurger.StoreCatalog.Infra.Services
         {
             _client = new HttpClient
             {
-                BaseAddress = new Uri("https://geekburguer.azurewebsites.net/")
+                BaseAddress = new Uri("https://geekburguer.azurewebsites.net/swagger/index.html")
             };
         }
 
@@ -22,7 +22,7 @@ namespace GeekBurger.StoreCatalog.Infra.Services
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://geekburguer.azurewebsites.net/");
+                client.BaseAddress = new Uri("");
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 return client.GetAsync("");
@@ -33,7 +33,7 @@ namespace GeekBurger.StoreCatalog.Infra.Services
         {
             using (var client = new HttpClient())
             {
-                return _client.GetAsync($"api/products/byrestrictions{restrictions}");
+                return _client.GetAsync($"api/products/byrestrictions/{restrictions}");
             }
         }
     }
