@@ -32,11 +32,11 @@ namespace GeekBurger.Production
                 .AddJsonFormatters()
                 .AddCors();
             
-            services.AddMvc()
+            /*services.AddMvc()
                         .AddJsonOptions(o => {
                                 o.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                                 o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                            });
+                            });*/
            
             services.AddAutoMapper();
             services.AddDbContext<ProductionContext>(o => o.UseInMemoryDatabase("geekburger-production"));
@@ -44,7 +44,7 @@ namespace GeekBurger.Production
             services.AddScoped<IProductionAreaChangedService, ProductionAreaChangedService>();
             services.AddScoped<IOrderFinishedService, OrderFinishedService>();
             services.AddScoped<INewOrderService, NewOrderService>();
-            services.AddScoped<IPaidOrderService, PaidOrderService>();
+            //services.AddScoped<IPaidOrderService, PaidOrderService>();
             
             services.AddSwaggerGen(c => {
                     c.SwaggerDoc("v1", new Info { Title = "Production Area API", Version = "v1" });
@@ -69,9 +69,9 @@ namespace GeekBurger.Production
 
             var availableProductionAreas = productionContext.ProductionAreas?.ToList();
 
-            newOrderService.SubscribeToTopic("ProductionAreaChangedTopic", availableProductionAreas);
+            //newOrderService.SubscribeToTopic("ProductionAreaChangedTopic", availableProductionAreas);
             newOrderService.SubscribeToTopic("orderpaid", availableProductionAreas);
-            paidOrderService.SubscribeToTopic("orderpaid", availableProductionAreas);
+            //paidOrderService.SubscribeToTopic("orderpaid", availableProductionAreas);
 
             app.UseSwagger();
             app.UseSwaggerUI(c => {
